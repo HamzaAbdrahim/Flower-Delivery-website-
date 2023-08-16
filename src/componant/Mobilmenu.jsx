@@ -9,7 +9,7 @@ const Mobilmenu = (prop) => {
   return (
     <>
     {prop.open && <div className="fixed z-[50] h-screen w-screen bg-scondary opacity-[35%] lg:hidden top-0 left-0"></div>}
-    <div ref={prop.ref} className={`fixed z-[60] h-screen  top-0  bg-white shadow-2xl duration-500 ease-in ${prop.open ? "left-0 " : "-left-[60rem]"} xl:hidden`}>
+    <div className={`fixed z-[60] h-screen  top-0  bg-white shadow-2xl duration-500 ease-in ${prop.open ? "left-0 " : "-left-[60rem]"} xl:hidden`}>
         <div  className={`${styles.borderweb} border-b py-2 px-4 cursor-pointer`} >
         <img src={assets.close}
          alt="close"

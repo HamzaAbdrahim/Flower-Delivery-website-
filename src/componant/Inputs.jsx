@@ -6,7 +6,7 @@ const Inputs = (prop) => {
         type="text" 
         placeholder={prop.placeholder}
         id="numbers"
-        className={`p-4 border border-solid w-full border-Gray ${styles.Caption}`} />
+        className={`p-4 border border-solid w-full border-Gray  ${styles.Caption}`} />
   )
 }
 

@@ -6,7 +6,19 @@ import Inbutton from "./Inbutton"
 import Fqo from './Fqo'
 
 const Plan = () => {
-    const [quantity, setQuantity] = useState(0);
+  const deliveryOptions = [
+    { option: 'Monthly', label: 'Monthly' },
+    { option: 'Bi-Weekly', label: 'Bi-Weekly' },
+    { option: 'Weekly', label: 'Weekly' },
+  ];
+  const [deliveryOption, setDeliveryOption] = useState('');
+  const [quantity, setQuantity] = useState(0);
+
+  const handleDeliveryOption = (option) => {
+    setDeliveryOption(option);
+  };
+
+  
 
     const handleIncrement = () => {
         setQuantity(quantity + 1);
@@ -20,7 +32,7 @@ const Plan = () => {
   return (
     <>
         <div className='flex flex-col-reverse items-start lg:flex-row justify-between'>
-            <div  className='flex flex-col justify-center py-20 px-10 '>
+            <div className='flex flex-col justify-center py-20 px-10 '>
                 <p className={`${styles.overline} `}>Build Your Subscription</p>
                 <div className=' my-4'>
                 <h1 className={`${styles.heading3} mb-4`}>Selecting a Plan</h1>
@@ -28,7 +40,7 @@ const Plan = () => {
 Every bouquet we deliver is carefully curated to ensure it arrives fresh and stunning. To modify, pause, or cancel your subscription, simply log in to your account dashboard.
  You're in complete control of your flower delivery experience.</p>
                 </div>
-            {plan.map(item => (
+            {plan.map(item  => (
                 <>
                 <div key={item.id} className='flex flex-col md:flex-row gap-4 justify-between '>
                     <img src={item.img} alt="" className='object-contain mt-auto' />
@@ -37,19 +49,22 @@ Every bouquet we deliver is carefully curated to ensure it arrives fresh and stu
                         <li>{item.price}</li>
                         <li>{item.delivery}</li>
                         <li>{item.budget}</li>
-                        <li>{item.vase}</li>
+                        {item.id == 1 ? "" : <li key={item.id}>{item.vase}</li>}
                         <li>{item.bonus}</li>
                         <li>{item.discount}</li>
                     </ol>
                 </div>
-                <Inbutton name="Select" style={`!w-full ${item.id === plan.length ? "mb-10" : ""}`} /></>
+                <Inbutton name="Select" style={`!w-full focus:bg-[#32936F] ${item.id === plan.length ? "mb-10" : ""}`} /></>
             ) )}
             <h1 className={`${styles.heading4} pt-10 border-t ${styles.borderweb} `}>How often do you want flowers delivered ?</h1>
             <p className={`${styles.Body} my-4`}>Select the delivery frequency</p>
+            
             <div className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center gap-4 `}>
-                <div className={`w-full py-5 ${styles.borderweb} border text-center cursor-pointer`}>Monthly</div>
-                <div className={`w-full py-5 ${styles.borderweb} border text-center cursor-pointer`}>Bi-Weekly</div>
-                <div className={`w-full py-5 ${styles.borderweb} border text-center cursor-pointer`}>Weekly</div>
+              {deliveryOptions.map(({option , label}) => (
+                <div key={option} className={`w-full duration-300 ease-in-out py-5  ${styles.borderweb} border text-center cursor-pointer ${
+                  deliveryOption === option ? 'bg-[#32936F] text-white' : ''
+                }`} onClick={() => handleDeliveryOption(option)}>{label}</div>
+              ))}
             </div>
             <h1 className={`${styles.heading4} ${styles.borderweb} border-t pt-10 mt-10`}>How many deliveries would you like ?</h1>
             <p className={`${styles.Body} mt-4 max-w-xl `}>Pay once and do not worry about flowers, our bouquets will be beautiful and on time, as many times as you need </p>

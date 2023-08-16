@@ -51,6 +51,7 @@ import Facebook from "./Facebook.svg"
 
 import closecart from "./closecart.svg"
 import product from "./product.png"
+import Storyimg from "./Storyimg.png"
 import Or from "./Or.svg"
 import Apple from "./Apple.svg"
 import edit from "./edit.svg"
@@ -80,6 +81,17 @@ import Vector from "./Vector.svg"
 import lock from "./lock.svg"
 import expand_more from "./expand_more.svg"
 import shopping_cart from "./shopping_cart.svg"
+import calendar_month from "./calendar_month.svg"
+import arrow_drop_down from "./arrow_drop_down.svg"
+import Google from "./Google.svg"
+import chevron_left from "./chevron-left.svg"
+import chevron_right from "./chevron-right.svg"
+import About from "./About.svg"
+
+import Storyone from "./Rectangle 74.png"
+import Storytwo from "./Rectangle 75.png"
+import Storythree from "./Rectangle 76.png"
+
 
 
 
@@ -169,7 +181,17 @@ fqoarow,
 Vector,
 lock,
 expand_more,
-shopping_cart
+shopping_cart,
+calendar_month,
+arrow_drop_down ,
+Google,
+chevron_left,
+chevron_right,
+Storyimg,
+About,
+Storyone,
+Storytwo,
+Storythree
 
 
 

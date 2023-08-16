@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../style';
 import assets from '../assets/imges';
+import Buttontwo from './Buttontwo';
 
 const Reviews = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
@@ -66,7 +67,7 @@ const Reviews = () => {
               ))}
             </div>
             <div className={`${styles.flexCenter} mt-16 `}>
-            <button className={`py-4 px-6 ${styles.borderweb} ${styles.button} border`}>Read reviews</button>
+              <Buttontwo name = "Read reviews" />
             </div>
           </div>
           <img

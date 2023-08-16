@@ -3,6 +3,8 @@ import styles from '../style';
 import assets from '../assets/imges';
 import Privacy from './Privacy';
 import Singup from './Singup';
+import Information from './Information';
+import { Link } from 'react-router-dom';
 
 const Sign = (prop) => {
   const [toggle, setToggle] = useState(false);
@@ -10,6 +12,7 @@ const Sign = (prop) => {
   function handleMenu() {
     setToggle((prevState) => !prevState);
   }
+  <Information show = {() => setToggle(true)} />
 
   const handleClose = () => {
     setToggle(false);
@@ -42,16 +45,17 @@ const Sign = (prop) => {
             className={`${styles.button} h-[3.5rem] w-full px-14 cursor-pointer bg-blacky ${styles.flexCenter} text-white`}
           />
         </form>
+        <Link></Link>
         <img src={assets.Or} alt="Or" className="my-6" />
         <p className={`${styles.heading6}`}>Instantly login or sign up via Google</p>
-        <div className={`${styles.flexitems} flex-col lg:flex-row gap-4 mt-3`}>
-          <div className={`${styles.flexitems} gap-2 py-4 px-6 border ${styles.borderweb} cursor-pointer`}>
-            <img src={assets.googllogo} alt="googllogo}" />
-            <p className={`${styles.button} w-full`}>continue with google</p>
+        <div className={`${styles.flexBetween} flex-col lg:flex-row gap-4 mt-3`}>
+          <div className={`${styles.flexCenter} gap-2 h-14 w-full border ${styles.borderweb} cursor-pointer`}>
+            <img src={assets.Google} alt="Google}" />
+            <p className={`${styles.button} `}>continue with google</p>
           </div>
-          <div className={`${styles.flexitems} gap-2 py-4 px-6 border ${styles.borderweb} cursor-pointer`}>
-            <img src={assets.Apple} alt="googllogo}" />
-            <p className={`${styles.button}`}>continue with Facebook</p>
+          <div className={`${styles.flexCenter} gap-2 h-14 w-full border ${styles.borderweb} cursor-pointer`}>
+            <img src={assets.Apple} alt="Apple" />
+            <p className={`${styles.button}`}>continue with appel</p>
           </div>
         </div>
         <p className={`${styles.overline} text-center w-full mt-10 `}>

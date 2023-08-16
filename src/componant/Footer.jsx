@@ -4,6 +4,8 @@ import Input from './Input';
 import Inbutton from './Inbutton';
 import { contact, shopeservise } from '../content';
 import assets from '../assets/imges';
+import Submit from './Submit';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -12,7 +14,7 @@ const Footer = () => {
         <p className={`${styles.Body} mb-6`}>Remember to offer beautiful flowers from Kyiv LuxeBouquets Valentines Day, Mothers Day, Christmas... Reminds you 7 days before. No spam or sharing your address</p>
         <div className='flex flex-col gap-4'>
         <Input placeholder = "Your Email" />
-        <Inbutton name = "Remind"/>
+        <Submit value = "Remind" />
         </div>
       </div>
       <div className={`${styles.borderweb} p-10 border-b xl:border-r`}>
@@ -41,14 +43,19 @@ const Footer = () => {
       ))}
       <h2 className={`${styles.heading5} my-6`}>Service</h2>
       <div>
-        <span className='mb-1'><a href="#">Flower Subcription</a></span>
+        <span className='mb-1'><a href="/subsciption">Flower Subcription</a></span>
         <span className='block'><a href="#">Wedding & Event Decor</a></span>
       </div>
       </div>
       <div className={`p-10`}>
       <h2 className={`${styles.heading5} mb-6`}>About Us</h2>
       <ul className='mb-6'>
+      <Link to = "/">
+        <li className={`${styles.links}`}>Home</li>
+        </Link>
+        <Link to = "/Ourstory">
         <li className={`${styles.links}`}>Our story</li>
+        </Link>
         <li className={`${styles.links}`}>Blog</li>
       </ul>
       <ul>

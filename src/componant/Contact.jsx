@@ -1,5 +1,6 @@
 import assets from "../assets/imges"
 import styles from "../style"
+import Submit from "./Submit"
 
 const Contact = () => {
   return (
@@ -13,8 +14,7 @@ const Contact = () => {
             type="text" 
             placeholder="+380 XX XXX XX XX"
             className={`p-4 border border-solid border-Gray  ${styles.Caption}`} />
-            <input type="submit" value="book a call" className={`${styles.button} h-[3.5rem] px-14 cursor-pointer bg-blacky ${styles.flexitems} text-white`} />
-
+            <Submit value="book a call"  />
         </form>
         </div>
             <div className={`${styles.flexitems} flex-col lg:flex-row text-center`}>
@@ -34,8 +34,20 @@ const Contact = () => {
             </div>
             </div>
         </div>
-        <div className="flex ml-auto">
-            <img src={assets.Rightcolum} className="w-full xl:w-auto" alt="" />
+        <div className=" ml-auto ">
+            <img src={assets.Rightcolum} className="h-[45rem]" alt="" />
+            <div className={`${styles.flexBetween} flex-col sm:flex-row ${styles.borderweb} border-x border-b`}>
+                <div className={`w-full py-4 px-4 text-left sm:text-center ${styles.borderweb} sm:border-r`}>
+                    <h2 className={`${styles.heading3}`}>Follow us</h2>
+                </div>
+                <div className="inline-flex pb-4 px-4 sm:px-0 sm:pb-0 w-full sm:justify-center gap-8">
+  <a target="_blank" href="http://www.instagram.com"><img src={assets.Instagram} alt="Instagram" /></a>
+  <a target="_blank" href="http://www.pinterest.com"><img src={assets.Pinterest} alt="Pinterest" /></a>
+  <a target="_blank" href="http://www.facebook.com"><img src={assets.Facebook} alt="Facebook" /></a>
+  <a target="_blank" href="http://www.twitter.com"><img src={assets.Twitter} alt="Twitter" /></a>
+  <a target="_blank" href="http://www.telegram.com"><img src={assets.Telegram} alt="Telegram" /></a>
+     </div>
+            </div>
         </div>
     </div>
   )

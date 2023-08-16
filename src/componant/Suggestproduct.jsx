@@ -14,7 +14,7 @@ function Suggestproduct() {
               >
                 <div className="text-center mb-6 w-full">
                   <p className={`${styles.heading6} mb-2`}>{item.titel}</p>
-                  <p className={`${styles.Caption}`}>{item.price}</p>
+                  <p className={`${styles.Caption} !text-[#808080] capitalize`}>{item.price}</p>
                 </div>
               </Link>
             ))}
