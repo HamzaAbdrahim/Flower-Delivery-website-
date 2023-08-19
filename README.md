@@ -1,7 +1,7 @@
 <h1 align="center">Flower Delivery Website</h1>
 
 <p align="center">
-  <img src="src/assest/preview.png" alt="Flower Delivery Website Preview">
+  <img src="src/assest/flower.png" alt="Flower Delivery Website Preview">
 </p>
 
 ## Live Demo
@@ -46,6 +46,12 @@ To run the project locally, follow these steps:
 
 3. Launch the website by opening the `index.html` file in a web browser.
 
+## Figma Design
+
+The design for the Flower Delivery Website UI and UX can be viewed on Figma. You can access it [here](https://www.figma.com/file/C7CU2GJPwMxvOxnaYYxdBl/eCommerce-Flower-Delivery-website-UI-and-UX-Ui-kit-Template-Community?type=design&is-community-duplicate=1&fuid=).
+
+Feel free to explore the design and use it as a reference for your project.
+
 ## Customization
 
 If you wish to customize the Flower Delivery Website, you can modify the HTML, CSS, and JavaScript files in the project. Feel free to update the content, styles, or add additional features as needed.
@@ -54,11 +60,6 @@ If you wish to customize the Flower Delivery Website, you can modify the HTML, C
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-## Figma Design
-
-The design for the Flower Delivery Website UI and UX can be viewed on Figma. You can access it [here](https://www.figma.com/file/C7CU2GJPwMxvOxnaYYxdBl/eCommerce-Flower-Delivery-website-UI-and-UX-Ui-kit-Template-Community?type=design&is-community-duplicate=1&fuid=).
-
-Feel free to explore the design and use it as a reference for your project.
 
 ## License
 
