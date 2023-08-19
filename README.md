@@ -1,7 +1,7 @@
 <h1 align="center">Flower Delivery Website</h1>
 
 <p align="center">
-  <img src="flower.png" alt="Flower Delivery Website Preview">
+  <img src="src/assets/flower.png" alt="Flower Delivery Website Preview">
 </p>
 
 ## Live Demo
