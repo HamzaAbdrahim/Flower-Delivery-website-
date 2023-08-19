@@ -54,6 +54,12 @@ If you wish to customize the Flower Delivery Website, you can modify the HTML, C
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
+## Figma Design
+
+The design for the Flower Delivery Website UI and UX can be viewed on Figma. You can access it [here](https://www.figma.com/file/C7CU2GJPwMxvOxnaYYxdBl/eCommerce-Flower-Delivery-website-UI-and-UX-Ui-kit-Template-Community?type=design&is-community-duplicate=1&fuid=).
+
+Feel free to explore the design and use it as a reference for your project.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
