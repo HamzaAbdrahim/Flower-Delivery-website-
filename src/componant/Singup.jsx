@@ -2,11 +2,29 @@ import assets from "../assets/imges"
 import styles from "../style"
 import Inputs from "./Inputs"
 import Privacy from "./Privacy"
+import React, { useRef , useEffect} from 'react';
 
 const Singup = (prop) => {
+    const popUpRef = useRef(null);
+
+    useEffect(() => {
+    
+        function handleClickOutside(e) {
+          if (popUpRef.current && !popUpRef.current.contains(e.target)) {
+            console.log("hamza");
+          }
+        }
+    
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+          document.removeEventListener('click', handleClickOutside);
+        };
+      }, []);
   return (
-    <div className={` ${prop.show ? "left-1/2" : "-right-[96rem]"} fixed z-[80] w-full lg:w-[45.125rem] h-[45rem] pt-20 pb-10 px-20 bottom-5  transform -translate-x-1/2 bg-white shadow-2xl duration-500 ease-in `}>
+    <div ref={popUpRef} className={` ${prop.show ? "left-1/2" : "-right-[96rem]"} fixed z-[80] w-full lg:w-[45.125rem] h-[45rem] pt-20 pb-10 px-20 bottom-5  transform -translate-x-1/2 bg-white shadow-2xl duration-500 ease-in `}>
     <h1 className={`${styles.heading2}`}>Sign up.</h1>
+    <img src={assets.close} className='-mt-10 absolute top-14 h-10 left-10 cursor-pointer' onClick={() => prop.toggle()} alt="close" />
+
     <p className={`${styles.heading6} my-6`}>Become a member and enjoy personalized gift recommendations, fast checkout, and more.</p>
     <div className={`${styles.flexBetween}`}>
         <div className={`${styles.flexitems}`}>

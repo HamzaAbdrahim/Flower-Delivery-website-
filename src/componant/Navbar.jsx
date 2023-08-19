@@ -11,20 +11,17 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react';
 import {  Cartcontext } from '../Statecontant';
 
-const Navbar = () => {
+const Navbar = (prop) => {
     const [toogol , settoggol] = useState(false)
     const [show , setshow]=  useState(false)
     const [sing , setsing]=  useState(false)
     const { cart } = useContext(Cartcontext);
-
-
     function handelmenu() {
         settoggol(prev => (!prev))
     }
     const handelclose = () => {
         settoggol(false)
     }
-
     const handelshow = () => {
         setshow(prev => (!prev))
     }
@@ -36,7 +33,7 @@ const Navbar = () => {
         setsing(true)
     }
     const handelsingclose = () => {
-        setsing(false)
+        setsing(prev => (!prev))
     }
 
   return (
@@ -67,7 +64,7 @@ const Navbar = () => {
                 showsing = {handelsing} />
                 <Shoppingcart 
                 show = {show}
-                handelshowclose = {handelshowclose} 
+                handelshowclose = {() => handelshowclose} 
                 />
                 <Sign 
                 open = {sing}

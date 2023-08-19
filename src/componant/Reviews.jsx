@@ -5,23 +5,22 @@ import Buttontwo from './Buttontwo';
 
 const Reviews = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
-
   const reviews = [
     {
       quote: 'Ordered flowers online and they were the best bouquet! Impressed everyone around. Highly recommend this flower shop!',
       author: 'Ronald Richards',
     },
     {
-      quote: 'Ordered sqfdsq online and they were the best bouquet! Impressed everyone around. Highly recommend this flower shop!',
-      author: 'Ronald Risqdqschards',
+      quote: 'The service was excellent, and the flowers were beautiful. I will definitely order from this shop again!',
+      author: 'Alice Johnson',
     },
     {
-      quote: 'Ordered flowers online and they were the best bouquet! Impressed everyone around. Highly recommend this flower shop!',
-      author: 'Ronald Rsqdsichards',
+      quote: 'I was amazed by the quality of the flowers and the fast delivery. This flower shop exceeded my expectations!',
+      author: 'Emily Thompson',
     },
     {
-      quote: 'Ordered flosqdsqdqsdwers online and they were the best bouquet! Impressed everyone around. Highly recommend this flower shop!',
-      author: 'Ronald Ricsqdqsdqsdqsdhards',
+      quote: 'The bouquet I received was stunning! The flowers were fresh and arranged beautifully. Highly recommended!',
+      author: 'Michael Davis',
     },
   ];
 
@@ -44,35 +43,35 @@ const Reviews = () => {
         <div className={`${styles.flexBetween}`}>
           <img
             src={assets.leftarrow}
-            className='cursor-pointer'
+            className='cursor-pointer transition-transform duration-300 hover:scale-110'
             alt="Previous Review"
             onClick={handlePrevReview}
           />
           <div>
-            <p className='text-center text-[2rem] not-italic font-normal leading-[120%] text-blacky font-BIZ'>
-              <span className='text-[3rem] italic font-normal leading-[120%]'>“</span>
+            <p className='text-center text-[2rem] not-italic font-normal leading-[120%] text-blacky font-BIZ transition-opacity duration-300'>
+              <span className='transition-all duration-[1s] ease-[ease] delay-[0s] text-[3rem] italic font-normal leading-[120%]'>“</span>
               {currentReview.quote}
               <span className='text-[3rem] italic font-normal leading-[120%]'>“</span>
             </p>
-            <p className={`${styles.heading6} text-center mt-4`}>– {currentReview.author}</p>
-            <div className='flex items-center justify-center mt-8 gap-4 relative'>
+            <p className={`${styles.heading6} text-center mt-4 transition-opacity duration-300`}>– {currentReview.author}</p>
+            <div className='flex items-center justify-center mt-8 gap-4 relative transition-opacity duration-300'>
               {reviews.map((review, index) => (
                 <span
                   key={index}
-                  className={`cursor-pointer w-3 h-3 bg-scondary rounded-full ${
+                  className={`cursor-pointer w-3 h-3 bg-scondary rounded-full transition-all duration-300 ${
                     index === currentReviewIndex ? 'bg-sky-400' : ''
                   }`}
                   onClick={() => setCurrentReviewIndex(index)}
                 ></span>
               ))}
             </div>
-            <div className={`${styles.flexCenter} mt-16 `}>
-              <Buttontwo name = "Read reviews" />
+            <div className={`${styles.flexCenter} mt-16 transition-opacity duration-300`}>
+              <Buttontwo name="Read reviews" />
             </div>
           </div>
           <img
             src={assets.rightarrow}
-            className='cursor-pointer'
+            className='cursor-pointer transition-transform duration-300 hover:scale-110'
             alt="Next Review"
             onClick={handleNextReview}
           />

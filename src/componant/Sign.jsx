@@ -1,35 +1,54 @@
-import React, { useState} from 'react';
+import React, { useState , useRef , useEffect} from 'react';
 import styles from '../style';
 import assets from '../assets/imges';
 import Privacy from './Privacy';
 import Singup from './Singup';
 import Information from './Information';
-import { Link } from 'react-router-dom';
+import Reasetcode from './Reasetcode';
 
 const Sign = (prop) => {
   const [toggle, setToggle] = useState(false);
+  const [password, setpassword] = useState(false);
+  const popUpRef = useRef(null);
+
+  function closeUp() {
+    setToggle(false)
+  }
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (popUpRef.current && !popUpRef.current.contains(e.target)) {
+          setpassword(false);
+      }
+    }
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   function handleMenu() {
     setToggle((prevState) => !prevState);
   }
+
   <Information show = {() => setToggle(true)} />
 
-  const handleClose = () => {
-    setToggle(false);
-  };
 
 
   return (
     <>
       {prop.open && (
-        <div className="fixed z-[50] h-screen w-screen bg-scondary opacity-[80%] top-0 left-0"></div>
+        <div className="fixed z-10 h-screen w-screen bg-scondary opacity-[80%] top-0 left-0"></div>
       )}
       <div
-        className={`fixed z-[80] w-full lg:w-[45.125rem] ${
+      ref={popUpRef}
+        className={`fixed z-20 w-full lg:w-[45.125rem] ${
           prop.open ? 'bottom-5' : '-bottom-[60rem]'
         } h-[45rem] pt-20 pb-10 px-20  left-1/2 transform -translate-x-1/2 bg-white shadow-2xl duration-500 ease-in`}
       >
         <h1 className={`${styles.heading2} mb-6`}>Greetings! Welcome to luxury gift shop.</h1>
+        <img src={assets.close} className='-mt-10 absolute top-14 h-10 left-10 cursor-pointer' onClick={() => prop.handelsingclose()} alt="close" />
         <form method="">
           <label htmlFor="numbers" className={`${styles.heading6}`}>
             Use your mobile number to sign up or log in
@@ -45,7 +64,7 @@ const Sign = (prop) => {
             className={`${styles.button} h-[3.5rem] w-full px-14 cursor-pointer bg-blacky ${styles.flexCenter} text-white`}
           />
         </form>
-        <Link></Link>
+        <p className={`${styles.heading6} capitalize mt-4`}>forgot password ?<span onClick={() => setpassword(true)} className='cursor-pointer hover:underline'>reset password</span></p>
         <img src={assets.Or} alt="Or" className="my-6" />
         <p className={`${styles.heading6}`}>Instantly login or sign up via Google</p>
         <div className={`${styles.flexBetween} flex-col lg:flex-row gap-4 mt-3`}>
@@ -66,7 +85,8 @@ const Sign = (prop) => {
         </p>
         <Privacy />
       </div>
-      <Singup show={toggle} />
+      <Singup show={toggle} toggle = {closeUp} />
+      <Reasetcode showreset = {password} />
     </>
   );
 };
