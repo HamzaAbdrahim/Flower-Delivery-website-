@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-You can access a live demo of the Flower Delivery Website [here](https://your-username.github.io/flower-delivery-website).
+You can access a live demo of the Flower Delivery Website [here](https://your-username.github.io/flower-delivery-website](https://gentle-otter-0b7040.netlify.app/).
 
 ## Pages
 
