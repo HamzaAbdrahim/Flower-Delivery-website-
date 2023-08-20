@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-You can access a live demo of the Flower Delivery Website [here](https://64e1176202c09377fe5d1480--genuine-sawine-604c67.netlify.app/)
+You can access a live demo of the Flower Delivery Website [here](https://64e1c0c6a489b63f3d34cf2f--lustrous-nougat-51ca11.netlify.app/)
 
 ## Pages
 
